@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio · Sankalp & Dispatch Chatbot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e7;--card:#fffdf8;--ink:#1d2433;--mut:#5d6578;--line:#ddd5c4;--acc:#e8890c;--acc2:#1e2761;--accInk:#1d2433;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12162b;--card:#1b2140;--ink:#f1ece0;--mut:#a9b0c6;--line:#2c3460;--acc:#f5a524;--acc2:#9db0ff;--accInk:#12162b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12162b;--card:#1b2140;--ink:#f1ece0;--mut:#a9b0c6;--line:#2c3460;--acc:#f5a524;--acc2:#9db0ff;--accInk:#12162b;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px 20px;padding:22px 0;font-family:'IBM Plex Mono',monospace;font-size:13px}
+nav .links-top{display:flex;flex-wrap:wrap;gap:8px 18px}
+nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--ink)}
+nav a.ext{color:var(--acc2);font-weight:500}
+nav b{color:var(--ink);font-weight:600;font-size:15px;font-family:Fraunces,Georgia,serif}
+.hero{padding:54px 0 40px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--acc);letter-spacing:.04em;text-transform:uppercase}
+h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(40px,8vw,76px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--acc);font-weight:500}
+.lead{font-size:18px;color:var(--mut);max-width:620px}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.fill{background:var(--acc);border-color:var(--acc);color:var(--accInk)}
+h2{font-family:Fraunces,Georgia,serif;font-size:32px;margin:0 0 8px}
+section{padding:46px 0;border-top:1px solid var(--line)}
+.sub{color:var(--mut);margin:0 0 28px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:22px}
+.proj .num{font-family:'IBM Plex Mono',monospace;color:var(--acc);font-size:13px}
+.proj h3{font-family:Fraunces,Georgia,serif;font-size:27px;margin:4px 0 4px}
+.proj .kick{color:var(--mut);margin:0 0 16px}
+.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+@media(max-width:720px){.cols{grid-template-columns:1fr}}
+ul{padding-left:18px;margin:8px 0}li{margin:5px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--mut)}
+.box{border-left:3px solid var(--acc);padding-left:14px}
+.box h4{margin:0 0 4px;font-size:13px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--acc2)}
+.links{margin-top:18px;display:flex;gap:16px;flex-wrap:wrap;font-weight:600;font-size:14px}
+.links a{color:var(--acc2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.sk h4{margin:0 0 8px;font-family:Fraunces,serif;font-size:18px}
+.sk p{margin:0;color:var(--mut);font-size:14px}
+.grp{display:grid;grid-template-columns:150px 1fr;gap:12px 20px;align-items:start;padding:16px 0;border-bottom:1px dashed var(--line)}
+.grp:last-child{border-bottom:0}
+.grp h4{margin:6px 0 0;font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--acc2)}
+.grp .chips{margin-top:0}
+.chip.k{color:var(--ink);background:var(--card)}
+@media(max-width:560px){.grp{grid-template-columns:1fr;gap:6px}}
+footer{padding:34px 0 50px;border-top:1px solid var(--line);color:var(--mut);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Jayanth Prajwal H R</b><div class="links-top"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a class="ext" href="https://github.com/jayanth800" target="_blank" rel="noopener">GitHub</a><a class="ext" href="https://www.linkedin.com/in/jayanth-hr1" target="_blank" rel="noopener">LinkedIn</a></div></nav>
+
+<header class="hero">
+  <div class="tag">Student developer · AI &amp; Data Science</div>
+  <h1>I build tools that <em>help people learn</em> and get answers.</h1>
+  <p class="lead">Hi, I'm <strong>Jayanth Prajwal H R</strong>. Two projects below: a mobile study planner for UPSC aspirants, and a chatbot service that answers with sources.</p>
+  <div class="btns"><a class="btn fill" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Both are connected: the chatbot is built into the Sankalp app.</p>
+
+  <article class="proj">
+    <div class="num">01</div>
+    <h3>SANKALP</h3>
+    <p class="kick">AI-powered UPSC preparation assistant · mobile app</p>
+    <div class="cols">
+      <div>
+        <p>UPSC aspirants juggle a huge syllabus with static timetables that can't adapt. Sankalp builds each day's plan from the student's real study history and keeps all study resources in one app.</p>
+        <ul>
+          <li><b>Adaptive daily plan</b> split into main subjects, revision and current affairs, with start, pause, complete, skip and move-to-tomorrow actions</li>
+          <li><b>Explainable analytics:</b> progress per topic and subject, streaks, weak and strong topics, and automatic revision for topics not studied in 7+ days</li>
+          <li><b>Syllabus, marks scheme and PYQ links</b>, plus <b>45 NCERT textbook links</b> for Classes 6 to 12</li>
+          <li><b>Live current-affairs feed</b> for India and International, filtered by category and time window</li>
+          <li><b>Secure backend</b> with hashed passwords, signed tokens, rate limiting and automated tests</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>How the planner thinks</h4>
+        <p>Each topic is scored from low accuracy, days since last studied, topics the student marked weak and preferred subjects. Missed tasks are kept in history and rank higher next time.</p>
+        <h4 style="margin-top:14px">Honest status</h4>
+        <p>Working end to end on a local setup. Next steps: online hosting, an installable Android build, and study reminders.</p>
+      </div>
+    </div>
+    <div class="chips"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">SQLite</span><span class="chip">JWT</span><span class="chip">bcrypt</span></div>
+    <div class="links"><a href="https://github.com/jayanth800" target="_blank" rel="noopener">GitHub →</a></div>
+  </article>
+
+  <article class="proj">
+    <div class="num">02</div>
+    <h3>Dispatch Chatbot</h3>
+    <p class="kick">Retrieval-based chatbot service · hosted on Render</p>
+    <div class="cols">
+      <div>
+        <p>A chatbot backend that answers questions and shows where the answer came from. It runs as its own online service, so other apps can use it through one chat endpoint.</p>
+        <ul>
+          <li><b>Sourced answers:</b> every reply returns its sources and retrieval time</li>
+          <li><b>Conversation memory</b> through a conversation id</li>
+          <li><b>Disagreement flag</b> when sources conflict, so users aren't misled</li>
+          <li><b>Plugged into Sankalp:</b> the app attaches the student's real weak topics and today's plan only for personal questions. General questions are sent with no user data</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>Why it matters</h4>
+        <p>Answers you can check are more trustworthy than answers you have to take on faith. Keeping personal data out of general questions also protects the user's privacy.</p>
+      </div>
+    </div>
+    <div class="chips"><span class="chip">Node.js</span><span class="chip">REST API</span><span class="chip">Retrieval</span><span class="chip">Render</span></div>
+    <div class="links"><a href="https://github.com/jayanth800" target="_blank" rel="noopener">GitHub →</a></div>
+  </article>
+</section>
+
+<section id="stack">
+  <h2>What I work with</h2>
+  <p class="sub">Tools used across these two projects.</p>
+  <div class="grid">
+    <div class="sk"><h4>Mobile</h4><p>React Native, Expo, AsyncStorage, light and dark themes</p></div>
+    <div class="sk"><h4>Backend</h4><p>Node.js, Express, REST APIs, SQLite, environment config</p></div>
+    <div class="sk"><h4>Security</h4><p>bcrypt hashing, JWT sessions, rate limiting, privacy-aware data handling</p></div>
+    <div class="sk"><h4>AI integration</h4><p>Chatbot connectors, sourced answers, personalised context</p></div>
+    <div class="sk"><h4>Quality</h4><p>Automated tests for auth, progress logic and chat mapping</p></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">What I've used while building Sankalp and the Dispatch Chatbot.</p>
+  <div class="grp"><h4>Languages</h4><div class="chips"><span class="chip k">JavaScript</span><span class="chip k">SQL</span><span class="chip k">JSX</span><span class="chip k">JSON</span></div></div>
+  <div class="grp"><h4>Mobile</h4><div class="chips"><span class="chip k">React Native</span><span class="chip k">Expo</span><span class="chip k">AsyncStorage</span><span class="chip k">Responsive UI</span><span class="chip k">Dark mode</span></div></div>
+  <div class="grp"><h4>Backend</h4><div class="chips"><span class="chip k">Node.js</span><span class="chip k">Express</span><span class="chip k">REST API design</span><span class="chip k">SQLite</span><span class="chip k">Database design</span></div></div>
+  <div class="grp"><h4>Security</h4><div class="chips"><span class="chip k">JWT authentication</span><span class="chip k">bcrypt hashing</span><span class="chip k">Rate limiting</span><span class="chip k">Privacy-aware design</span></div></div>
+  <div class="grp"><h4>AI &amp; data</h4><div class="chips"><span class="chip k">Chatbot integration</span><span class="chip k">Retrieval with sources</span><span class="chip k">Adaptive scoring logic</span><span class="chip k">Learning analytics</span></div></div>
+  <div class="grp"><h4>Tools</h4><div class="chips"><span class="chip k">Git &amp; GitHub</span><span class="chip k">Render</span><span class="chip k">npm</span><span class="chip k">Automated testing</span></div></div>
+  <div class="grp"><h4>Also</h4><div class="chips"><span class="chip k">Technical reports</span><span class="chip k">Presentations</span><span class="chip k">Problem solving</span></div></div>
+</section>
+
+<section id="contact">
+  <h2>Let's talk</h2>
+  <p class="sub">Open to internships, projects and feedback.</p>
+  <div class="btns" style="margin-top:0">
+    <a class="btn fill" href="https://www.linkedin.com/in/jayanth-hr1" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/jayanth800" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<footer><span>© Jayanth Prajwal H R</span><span>Built with <a href="#projects">Sankalp</a> &amp; Dispatch in mind</span></footer>
+</div>
+</body>
+</html>
